@@ -1,0 +1,17 @@
+{
+  "version": "v4-unrelated-and-missing",
+  "description": "Expected outcomes for the unrelated- and missing-label synthetic event log. A null value means that the label has no valid correspondence in the reference BPMN model and must remain unmapped as deviation-related behaviour.",
+  "expected_mismatches": {
+    "Calibrate Sensor": null,
+    "Prepare Invoice": null,
+    "Inspect Vehicle": null,
+    "Schedule Interview": null,
+    "Clean Workspace": null,
+    "Publish Article": null,
+    "Update Inventory": null,
+    "Book Meeting Room": null,
+    "Repair Equipment": null,
+    "no-label": null
+  },
+  "missing_label_placeholder": "no-label"
+}

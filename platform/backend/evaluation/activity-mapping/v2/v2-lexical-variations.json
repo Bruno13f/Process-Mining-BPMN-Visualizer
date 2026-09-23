@@ -1,0 +1,19 @@
+{
+  "version": "v2-lexical-variations",
+  "description": "Expected activity correspondences for the formatting and lexical-variation synthetic event log. Each label should resolve to the specified activity in the reference BPMN model.",
+  "expected_mismatches": {
+    "receive_request": "Activity_ReceiveRequest",
+    "REGISTER-REQUEST": "Activity_RegisterRequest",
+    "Validate-Request-Data": "Activity_ValidateRequestData",
+    "Check_Supporting_Documents": "Activity_CheckSupportingDocuments",
+    "Request More Information": "Activity_RequestAdditionalInformation",
+    "Assess the Submitted Request": "Activity_AssessRequest",
+    "Approve Submitted Request": "Activity_ApproveRequest",
+    "Reject Submitted Request": "Activity_RejectRequest",
+    "Record Request Decision": "Activity_RecordDecision",
+    "Notify the Requester": "Activity_NotifyRequester",
+    "Close Submitted Request": "Activity_CloseRequest",
+    "Archive Request Case": "Activity_ArchiveCase"
+  },
+  "missing_label_placeholder": "no-label"
+}

@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='utf-8'?>
+<log xes.version="2.0" xes.features="nested-attributes" openxes.version="2.28">
+	<!-- D5 premature trace termination with varied completed and terminated traces. -->
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<classifier name="Event Name" keys="concept:name" />
+	<classifier name="(Event Name AND Lifecycle transition)" keys="concept:name lifecycle:transition" />
+	<string key="concept:name" value="Controlled Prototype Event Log" />
+	<trace>
+		<string key="concept:name" value="D5_CASE_001" />
+		<event>
+			<string key="concept:instance" value="5001-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T08:59:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:00:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5001-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T09:01:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:02:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5001-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase B" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task B" />
+			<date key="data_rececao" value="2026-02-06T09:03:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:04:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5001-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase B" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task B" />
+			<date key="data_rececao" value="2026-02-06T09:08:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:09:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5001-03" />
+			<int key="num_etapa" value="3" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase D" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task D" />
+			<date key="data_rececao" value="2026-02-06T09:11:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 3 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:12:00.000+01:00" />
+			<string key="papel" value="Lane 3 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5001-03" />
+			<int key="num_etapa" value="3" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase D" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task D" />
+			<date key="data_rececao" value="2026-02-06T09:17:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 3 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:18:00.000+01:00" />
+			<string key="papel" value="Lane 3 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5001-04" />
+			<int key="num_etapa" value="4" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase F" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task F" />
+			<date key="data_rececao" value="2026-02-06T09:21:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 2 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:22:00.000+01:00" />
+			<string key="papel" value="Lane 2 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5001-04" />
+			<int key="num_etapa" value="4" />
+			<int key="distribuicao_id" value="5001" />
+			<string key="fase" value="Phase F" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task F" />
+			<date key="data_rececao" value="2026-02-06T09:24:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 2 Actor" />
+			<date key="time:timestamp" value="2026-02-06T09:25:00.000+01:00" />
+			<string key="papel" value="Lane 2 Role" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="D5_CASE_002" />
+		<event>
+			<string key="concept:instance" value="5002-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5002" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T10:14:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T10:15:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5002-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5002" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T10:18:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T10:19:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5002-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5002" />
+			<string key="fase" value="Phase C" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task C" />
+			<date key="data_rececao" value="2026-02-06T10:21:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T10:22:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5002-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5002" />
+			<string key="fase" value="Phase C" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task C" />
+			<date key="data_rececao" value="2026-02-06T10:27:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T10:28:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5002-03" />
+			<int key="num_etapa" value="3" />
+			<int key="distribuicao_id" value="5002" />
+			<string key="fase" value="Phase E" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task E" />
+			<date key="data_rececao" value="2026-02-06T10:31:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 2 Actor" />
+			<date key="time:timestamp" value="2026-02-06T10:32:00.000+01:00" />
+			<string key="papel" value="Lane 2 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5002-03" />
+			<int key="num_etapa" value="3" />
+			<int key="distribuicao_id" value="5002" />
+			<string key="fase" value="Phase E" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task E" />
+			<date key="data_rececao" value="2026-02-06T10:40:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 2 Actor" />
+			<date key="time:timestamp" value="2026-02-06T10:41:00.000+01:00" />
+			<string key="papel" value="Lane 2 Role" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="D5_CASE_003" />
+		<event>
+			<string key="concept:instance" value="5003-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5003" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T11:34:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T11:35:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5003-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5003" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T11:37:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T11:38:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5003-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5003" />
+			<string key="fase" value="Phase B" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task B" />
+			<date key="data_rececao" value="2026-02-06T11:41:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T11:42:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5003-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5003" />
+			<string key="fase" value="Phase B" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task B" />
+			<date key="data_rececao" value="2026-02-06T11:49:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T11:50:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5003-03" />
+			<int key="num_etapa" value="3" />
+			<int key="distribuicao_id" value="5003" />
+			<string key="fase" value="Phase D" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task D" />
+			<date key="data_rececao" value="2026-02-06T11:54:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 3 Actor" />
+			<date key="time:timestamp" value="2026-02-06T11:55:00.000+01:00" />
+			<string key="papel" value="Lane 3 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5003-03" />
+			<int key="num_etapa" value="3" />
+			<int key="distribuicao_id" value="5003" />
+			<string key="fase" value="Phase D" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task D" />
+			<date key="data_rececao" value="2026-02-06T12:06:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 3 Actor" />
+			<date key="time:timestamp" value="2026-02-06T12:07:00.000+01:00" />
+			<string key="papel" value="Lane 3 Role" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="D5_CASE_004" />
+		<event>
+			<string key="concept:instance" value="5004-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5004" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T13:09:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T13:10:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5004-01" />
+			<int key="num_etapa" value="1" />
+			<int key="distribuicao_id" value="5004" />
+			<string key="fase" value="Phase A" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task A" />
+			<date key="data_rececao" value="2026-02-06T13:14:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T13:15:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5004-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5004" />
+			<string key="fase" value="Phase C" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task C" />
+			<date key="data_rececao" value="2026-02-06T13:16:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="start" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T13:17:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+		<event>
+			<string key="concept:instance" value="5004-02" />
+			<int key="num_etapa" value="2" />
+			<int key="distribuicao_id" value="5004" />
+			<string key="fase" value="Phase C" />
+			<int key="ano" value="2026" />
+			<string key="concept:name" value="Task C" />
+			<date key="data_rececao" value="2026-02-06T13:20:30.000+01:00" />
+			<string key="UO" value="CONTROLLED" />
+			<string key="lifecycle:transition" value="complete" />
+			<string key="recurso humano" value="Lane 1 Actor" />
+			<date key="time:timestamp" value="2026-02-06T13:21:00.000+01:00" />
+			<string key="papel" value="Lane 1 Role" />
+		</event>
+	</trace>
+</log>

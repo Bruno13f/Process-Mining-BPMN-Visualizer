@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log xmlns="http://www.xes-standard.org/"
+     xes.version="1.0"
+     xes.features="nested-attributes"
+     openxes.version="1.0RC7">
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+  <extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+  <extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+  <global scope="trace">
+    <string key="concept:name" value="UNKNOWN" />
+  </global>
+  <global scope="event">
+    <string key="concept:name" value="UNKNOWN" />
+    <date key="time:timestamp" value="1970-01-01T00:00:00Z" />
+    <string key="lifecycle:transition" value="complete" />
+  </global>
+  <classifier name="Activity" keys="concept:name" />
+  <classifier name="Activity and lifecycle" keys="concept:name lifecycle:transition" />
+  <string key="concept:name" value="Activity Matching Validation Log" />
+  <trace>
+    <string key="concept:name" value="C01" />
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-06T09:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-06T09:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-06T09:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-06T09:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-06T09:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-06T09:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-06T09:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-06T09:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-06T10:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-06T10:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Approve Submitted Request" />
+      <date key="time:timestamp" value="2025-01-06T10:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Approve Submitted Request" />
+      <date key="time:timestamp" value="2025-01-06T10:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-06T10:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-06T10:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-06T10:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-06T10:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-06T11:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-06T11:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-06T11:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-06T11:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="C02" />
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-07T09:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-07T09:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-07T09:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-07T09:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-07T09:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-07T09:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-07T09:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-07T09:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-07T10:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-07T10:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Approve Submitted Request" />
+      <date key="time:timestamp" value="2025-01-07T10:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Approve Submitted Request" />
+      <date key="time:timestamp" value="2025-01-07T10:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-07T10:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-07T10:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-07T10:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-07T10:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-07T11:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-07T11:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-07T11:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-07T11:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="C03" />
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-08T09:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-08T09:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-08T09:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-08T09:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-08T09:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-08T09:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-08T09:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-08T09:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Request More Information" />
+      <date key="time:timestamp" value="2025-01-08T10:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Request More Information" />
+      <date key="time:timestamp" value="2025-01-08T10:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-08T10:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-08T10:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-08T10:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-08T10:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Approve Submitted Request" />
+      <date key="time:timestamp" value="2025-01-08T10:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Approve Submitted Request" />
+      <date key="time:timestamp" value="2025-01-08T10:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-08T11:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-08T11:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-08T11:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-08T11:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-08T11:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-08T11:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-08T11:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-08T11:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="C04" />
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-09T09:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-09T09:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-09T09:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-09T09:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-09T09:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-09T09:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-09T09:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-09T09:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-09T10:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-09T10:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Reject Submitted Request" />
+      <date key="time:timestamp" value="2025-01-09T10:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Reject Submitted Request" />
+      <date key="time:timestamp" value="2025-01-09T10:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-09T10:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-09T10:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-09T10:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-09T10:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-09T11:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-09T11:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-09T11:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-09T11:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="C05" />
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-10T09:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-10T09:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-10T09:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-10T09:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-10T09:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-10T09:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-10T09:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-10T09:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-10T10:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-10T10:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Reject Submitted Request" />
+      <date key="time:timestamp" value="2025-01-10T10:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Reject Submitted Request" />
+      <date key="time:timestamp" value="2025-01-10T10:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-10T10:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-10T10:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-10T10:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-10T10:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-10T11:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-10T11:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-10T11:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-10T11:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="C06" />
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-11T09:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="receive_request" />
+      <date key="time:timestamp" value="2025-01-11T09:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-11T09:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="REGISTER-REQUEST" />
+      <date key="time:timestamp" value="2025-01-11T09:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-11T09:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Validate-Request-Data" />
+      <date key="time:timestamp" value="2025-01-11T09:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-11T09:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-11T09:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Request More Information" />
+      <date key="time:timestamp" value="2025-01-11T10:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Request More Information" />
+      <date key="time:timestamp" value="2025-01-11T10:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-11T10:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Check_Supporting_Documents" />
+      <date key="time:timestamp" value="2025-01-11T10:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-11T10:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Assess the Submitted Request" />
+      <date key="time:timestamp" value="2025-01-11T10:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Reject Submitted Request" />
+      <date key="time:timestamp" value="2025-01-11T10:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Reject Submitted Request" />
+      <date key="time:timestamp" value="2025-01-11T10:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-11T11:00:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Record Request Decision" />
+      <date key="time:timestamp" value="2025-01-11T11:10:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-11T11:15:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Notify the Requester" />
+      <date key="time:timestamp" value="2025-01-11T11:25:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-11T11:30:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Close Submitted Request" />
+      <date key="time:timestamp" value="2025-01-11T11:40:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-11T11:45:00Z" />
+      <string key="lifecycle:transition" value="start" />
+    </event>
+    <event>
+      <string key="concept:name" value="Archive Request Case" />
+      <date key="time:timestamp" value="2025-01-11T11:55:00Z" />
+      <string key="lifecycle:transition" value="complete" />
+    </event>
+  </trace>
+</log>
+

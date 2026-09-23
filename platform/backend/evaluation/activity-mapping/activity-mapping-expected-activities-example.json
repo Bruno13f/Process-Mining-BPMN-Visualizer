@@ -1,0 +1,10 @@
+{
+  "version": "vX-lexical-variation-example",
+  "description": "Example expected outcomes for controlled semantic activity-mapping validation. Each version folder, such as v1, v2, v3, or v4, must have its own JSON file with the expected mappings for that specific synthetic log version. Replace the labels and BPMN IDs with the values from the version being evaluated.",
+  "expected_mismatches": {
+    "aprovar-pedido": "Activity_ApproveRequest",
+    "validar-documento": "Activity_ValidateDocument",
+    "atividade-desconhecida": null
+  },
+  "missing_label_placeholder": "no-label"
+}

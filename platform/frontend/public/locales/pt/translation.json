@@ -1,0 +1,312 @@
+{
+  "app": {
+    "title": "Visualizador de Métricas de Conformidade BPMN",
+    "connected": "Conectado",
+    "disconnected": "Desconectado"
+  },
+  "sidebar": {
+    "analysisResults": "Resultados da Análise",
+    "uploadResources": "Ficheiros"
+  },
+  "tabs": {
+    "results": "Resultados",
+    "mappings": "Dados do Processo",
+    "original": "Original",
+    "performance": "Desempenho",
+    "conformance": "Conformidade",
+    "frequency": "Frequência",
+    "viewOptions": "Vistas",
+    "processModel": "Modelo",
+    "deviations": "Com Desvios",
+    "metric": "Variável",
+    "average": "Média",
+    "median": "Mediana"
+  },
+  "metrics": {
+    "fitness": "Fitness",
+    "fitnessDescription": "Alinhamento\nmodelo-log",
+    "precision": "Precisão",
+    "precisionDescription": "Especificidade\ndo modelo",
+    "generalization": "Generalização",
+    "generalizationDescription": "Flexibilidade\ndo modelo",
+    "simplicity": "Simplicidade",
+    "simplicityDescription": "Complexidade\ndo modelo",
+    "processQuality": "Casos Perfeitos",
+    "processQualityFittingTraces": "Casos Perfeitos:",
+    "processQualityAllTraces": "Total de Casos:"
+  },
+  "analysis": {
+    "noResults": "Sem resultados da análise",
+    "noResultsDescription":  "Por favor, execute novamente a análise para ver as métricas.",
+    "noMappings": "Nenhum mapeamento aplicado",
+    "noMappingsDescription": "Não foi necessário aplicar nenhum mapeamento.",
+    "startAnalysis": "Iniciar Análise",
+    "completeAnalysis": "Realize a análise para visualizar a vista da conformidade",
+    "completeAnalysisDeviations": "Realize a análise para visualizar os desvios"
+  },
+  "upload": {
+    "bpmnModelFile": "Ficheiro Modelo BPMN",
+    "logFile": "Ficheiro Log XES",
+    "uploadModel": "Upload Modelo BPMN",
+    "removeModelTooltip": "Remover modelo BPMN",
+    "uploadLog": "Upload Log XES",
+    "removeLogTooltip": "Remover log XES",
+    "noBpmnModel": "Nenhum modelo BPMN",
+    "uploadBpmnFile": "Dê upload a um ficheiro .bpmn para visualizá-lo aqui"
+  },
+  "languageDropdown": {
+    "selectLanguage": "Selecione a linguagem...",
+    "noLanguage": "Nenhuma linguagem encontrada."
+  },
+  "conformance": {
+    "title": "Análise",
+    "connecting": "Estabelecendo conexão com o Servidor de Análise...",
+    "progressCell": "Célula {{current}} de {{total}}",
+    "progress": "Análise em progresso...",
+    "complete": "Análise concluída com sucesso!",
+    "failed": "Falha na análise.",
+    "create": "Criar visualizações BPMN",
+    "stop": "Parar",
+    "close": "Fechar"
+  },
+  "variables": {
+    "retrieving": "A carregar variáveis...",
+    "retrieved": "Variáveis carregadas com sucesso!",
+    "loading": "A carregar resultados da análise do servidor...",
+    "failed": "Falha ao carregar resultados da análise.",
+    "successVariables": "Variáveis Carregadas com Sucesso",
+    "success": "Resultados da análise carregados com sucesso!",
+    "close": "Fechar"
+  },
+  "legend": {
+    "viewOptions": "Opções de Vista",
+    "alignments": "Alinhamentos",
+    "timePerformance": "Conformidade Temporal",
+    "timeConformanceUnavailable": "A conformidade temporal não está disponível porque não foram encontrados tempos de ciclo no modelo BPMN.",
+    "alignmentsView": "Vista de Alinhamentos",
+    "timeConformanceView": "Vista de Conformidade Temporal",
+    "timeConformanceViewModel": "Modelo",
+    "timeConformanceViewDeviations": "Com Desvios",
+    "timeConformanceMetric": "Variável",
+    "timeConformanceMetricAverage": "Média",
+    "timeConformanceMetricMedian": "Mediana",
+    "overallConformance": "Conformidade Geral",
+    "moveDetails": "Detalhes de Movimentos",
+    "moveTypes": "Tipos de Movimentos",
+    "conformanceHeatmap": "Mapa de Conformidade",
+    "timeConformanceHeatmap": "Mapa de Conformidade Temporal",
+    "border": "Borda da atividade indica o nível de conformidade",
+    "synchronousMoves": "Movimentos Síncronos",
+    "modelMoves": "Movimentos do Modelo",
+    "logMoves": "Movimentos do Log",
+    "lessConformance": "Menor Conformidade",
+    "higherConformance": "Maior Conformidade",
+    "lessTimeConformance": "Mais rápido que o esperado",
+    "higherTimeConformance": "Mais lento que o esperado",
+    "howItWorks": "Como Funciona",
+    "howItWorksLabelFrequency": "Frequências:",
+    "howItWorksLabelPerformance": "Tempo Médio:",
+    "howItWorksDescriptionFrequency": "Calculado a partir de fluxos conformantes para as atividades e fluxos.",
+    "howItWorksDescriptionPerformance": "Calculado a partir de fluxos conformantes para as atividades e fluxos.",
+    "howItWorksExampleLabelFrequency": "Exemplo:",
+    "howItWorksExampleLabelPerformance": "Interação:",
+    "howItWorksExampleDescriptionFrequency": "A tem 10 de frequência (fluxo conformante de entrada), mas apenas 5 seguem o caminho esperado para B (5 desvios), resultando em 5 de frequência para C.",
+    "howItWorksExampleDescriptionPerformance": "Clique numa atividade para ver os seus caminhos e respetivos tipos de tempo ativo. Pode também selecionar qual caminho deseja destacar.",
+    "modelActivities": "Atividades do Modelo",
+    "estimatedVsRealCycleTime": "Tempo de Ciclo Estimado vs Real",
+    "qualityScoreDesc": "Atividades pintadas com base no heatmap doscore de conformidade.",
+    "conformantMoves": "Movimentos Conformes:",
+    "conformantMovesDesc": "Passos que seguiram o processo corretamente.",
+    "nonConformantMoves": "Movimentos Não Conformes:",
+    "nonConformantMovesDesc": "Passos desviados do processo esperado.",
+    "successRate": "Taxa de Sucesso:",
+    "noData": "Sem dados disponíveis",
+    "performanceConformanceAverageTime": "Tempo Médio:",
+    "performanceConformanceMedianTime": "Tempo Mediano:",
+    "performanceConformanceAverageTimeDesc": "Calculado a partir dos fluxos conformes do modelo, usando tanto o tempo de espera entre atividades como o tempo de execução da atividade de destino.",
+    "performanceConformanceCycleTime": "Tempo de Ciclo Estimado (CT):",
+    "performanceConformanceCycleTimeDesc": "O tempo de ciclo esperado definido para cada atividade. É comparado com o tempo total observado.",
+    "performanceConformanceTotalTime": "Tempo de Ciclo Real (RCT):",
+    "performanceConformanceTotalTimeDesc": "Tempo de espera + tempo de execução.",
+    "performanceConformanceInteraction": "Interação:",
+    "performanceConformanceInteractionDesc": "Clique numa atividade para revelar os caminhos possíveis, os seus tipos de tempos ativos e a respetiva conformidade face ao tempo de ciclo. Pode selecionar um caminho para o destacar no modelo.",
+    "frequencyDeviationsUnavailable": "Os desvios de frequência não estão disponíveis porque não foram encontradas atividades ou fluxos desviantes.",
+    "performanceDeviationsUnavailable": "Os desvios de desempenho não estão disponíveis porque não foram encontradas atividades ou fluxos desviantes."
+  },
+  "tooltips": {
+    "synchronous": {
+      "title": "Processo Seguido Conforme Esperado",
+      "description": "São ações que corresponderam ao processo exatamente como pretendido. Demonstram alinhamento adequado com o fluxo de trabalho definido."
+    },
+    "model": {
+      "title": "Passo Esperado Ausente",
+      "description": "São atividades que o modelo exigia, mas não foram executadas. Destacam lacunas onde o fluxo de trabalho ficou incompleto."
+    },
+    "log": {
+      "title": "Passo Inesperado Ocorreu",
+      "description": "São ações registadas que o modelo não antecipou. Revelam desvios ou comportamentos extras fora do fluxo esperado."
+    },
+    "activities": {
+      "title": "Atividades Inesperadas",
+      "description": "São atividades que foram executadas mas não fazem parte do modelo original. Representam desvios onde passos adicionais foram realizados fora do fluxo esperado."
+    },
+    "flow": {
+      "title": "Fluxos Inesperados",
+      "description": "São conexões entre atividades que desviam do fluxo esperado. Mostram caminhos tomados que diferem do esperado no modelo."
+    },
+    "endEvent": {
+      "title": "Eventos de Fim Inesperados",
+      "description": "São eventos de fim que desviam do fluxo esperado. Mostram caminhos tomados que diferem do esperado no modelo."
+    },
+    "lanes": {
+      "title": "Intervenientes Inesperados",
+      "description": "Estas são secções do modelo que contêm atividades realizadas por intervenientes inesperados."
+    },
+    "unexpectedFrequency": {
+      "title": "Atividades Inesperadas",
+      "description": "Atividades que foram executadas mas não fazem parte do modelo e a respetiva frequência."
+    },
+    "unexpectedPerformance": {
+      "title": "Atividades Inesperadas",
+      "description": "Atividades que foram executadas mas não fazem parte do modelo e o respetivo tempo médio de cada uma."
+    },
+    "unexpectedLanes": {
+      "title": "Intervenientes Inesperados",
+      "description": "Intervenientes presentes no log do processo mas que não estão presentes no modelo."
+    },
+    "modelMismatch": {
+      "title": "Inconsistências Modelo",
+      "description": "Pode haver diferenças entre a frequência de atividades e os fluxos de entrada e saída devido a desvios ocultos. Estas diferenças podem ser vistas ao passar o cursor sobre a atividade."
+    }
+  },
+  "deviations": {
+    "legend": "Legenda Desvios",
+    "label": "Label",
+    "unexpectedActivities": "Atividades Inesperadas",
+    "unexpectedFlow": "Fluxos Inesperados",
+    "unexpectedEndEvent": "Eventos de Fim Inesperados",
+    "unexpectedLanes": "Intervenientes Inesperados",
+    "noActivitiesFound": "Nenhum desvio encontrado",
+    "noCTEntries": "Nenhum registo de tempo de ciclo encontrado",
+    "noLanesFound": "Nenhum desvio de secções encontrado",
+    "withDeviationsFrequency": "Frequência de Desvios",
+    "withDeviationsPerformance": "Filtro de Desvios",
+    "modelDeviationsFrequency": "Frequência de Fluxos Inesperados",
+    "withDeviationsFrequencyDescription": "Filtra quais desvios serão considerados com base na frequência dos fluxos inesperados:",
+    "withDeviationsPerformanceDescription": "Filtra desvios com base na métrica de tempo dos fluxos inesperados:",
+    "modelDeviationsFrequencyDescription": "Filtra quais fluxos inesperados serão considerados com base na sua frequência:",
+    "withDeviationsFrequencyNote": "Fluxos adjacentes a desvios filtrados serão pintados de cinzento",
+    "withDeviationsPerformanceNote": "Fluxos adjacentes fora da métrica de tempo selecionada serão pintados de cinzento",
+    "noUnexptedFlowsFoundModel": "Nenhum fluxo inesperado disponível para o modelo",
+    "noRolesFound": "Nenhum papel inesperado presente"
+  },
+  "conformanceTooltip": {
+    "synchronousMoves": "Movimentos Síncronos",
+    "modelMoves": "Movimentos do Modelo",
+    "logMoves": "Movimentos do Log",
+    "conformantMoves": "Movimentos Conformes",
+    "nonConformantMoves": "Movimentos Não Conformes"
+  },
+  "activityTooltip": {
+    "frequency": "Frequência da atividade:",
+    "roles": "Intervenientes (e suas frequências):",
+    "seeMore": "Clique na legenda para ver mais {{count}} intervenientes ...",
+    "noRoles": "Nenhum interveniente associado a esta atividade.",
+    "averageTime": "Média",
+    "medianTime": "Mediana",
+    "minTime": "Mínimo",
+    "maxTime": "Máximo",
+    "deviations": "Desvios",
+    "incomingMismatches": "Desvios de Entrada",
+    "outgoingMismatches": "Desvios de Saída"
+  },
+  "performanceFlowTooltip": {
+    "averageTime": "Tempo Médio",
+    "description": "Escolha qual caminho deseja destacar para mostrar o tipo de tempo selecionado entre as duas atividades no modelo.",
+    "flows": "Caminhos",
+    "noPaths": "Nenhum caminho disponível."
+  },
+  "frequencyFlowTooltip": {
+    "flowFrequency": "Frequência do fluxo",
+    "flows": "Fluxos",
+    "noPaths": "Nenhum caminho disponível"
+  },
+  "timeConformanceTooltip": {
+    "cycleTime": "Tempo de Ciclo",
+    "realCycleTime": "Tempo de Ciclo Real (RCT)",
+    "estimatedCycleTime": "Tempo de Ciclo Estimado",
+    "selectPathForBreakdown": "Esta atividade pode ser alcançada através de vários caminhos. Clique na atividade para revelar os caminhos possíveis.",
+    "day": "dia",
+    "days": "dias",
+    "startEvent": "Evento Inicial",
+    "endEvent": "Evento Final",
+    "notAvailable": "N/A",
+    "muchFasterThanExpected": "Muito mais rápido que o esperado",
+    "fasterThanExpected": "Mais rápido que o esperado",
+    "slightlyFasterThanExpected": "Ligeiramente mais rápido que o esperado",
+    "asExpected": "Como esperado",
+    "slightlySlowerThanExpected": "Ligeiramente mais lento que o esperado",
+    "slowerThanExpected": "Mais lento que o esperado",
+    "muchSlowerThanExpected": "Muito mais lento que o esperado"
+  },
+  "heatmapTooltip": {
+    "titleFrequency": "Frequência Atividades",
+    "titleAveragePerformance": "Tempo Médio Atividades",
+    "titleMedianPerformance": "Tempo Mediano Atividades"
+  },
+  "mapping": {
+    "title": "Resultados Mapeamento Algoritmo IA",
+    "description": "Reveja os mapeamentos entre o log e atividades do modelo sugeridos antes de continuar. Pode criar novos mapeamentos, desselecionar os sugeridos ou selecionar os não sugeridos a aplicar.",
+    "manualMapping": "Mapeamentos Manuais",
+    "manualMappingDescription": "Crie mapeamentos de atividades para aquelas que não foram detetadas automaticamente pelo algoritmo. Isto é útil para exceções.",
+    "createManualMapping": "Criar Mapeamento Manual",
+    "removeManualMapping": "Remover mapeamento manual",
+    "noManualMappings" : "Nenhum mapeamento manual adicionado.",
+    "suggestedMapping": "Sugeridos",
+    "suggestedMappingDescription" : "Estes mapeamentos têm pontuações de confiança elevadas e serão aplicados. Pode desmarcá-los para excluir, se desejar.",
+    "noSuggestedMappings": "Nenhum mapeamento sugerido disponível.",
+    "nonSuggestedMapping": "Não Sugeridos",
+    "nonSuggestedMappingDescription" : "Estes mapeamentos têm pontuações de confiança baixas e não serão aplicados. Pode selecioná-los para incluir, se desejar.",
+    "noNonSuggestedMappings": "Nenhum mapeamento não sugerido disponível.",
+    "logLabel": "Atividade do log",
+    "placeholderLog": "Selecionar atividade do log...",
+    "searchPlaceholderLog": "Pesquisar atividades do log...",
+    "noLogActivities": "Nenhuma atividade do log encontrada.",
+    "modelLabel": "Atividade do modelo",
+    "placeholderModel": "Selecionar atividade do modelo...",
+    "searchPlaceholderModel": "Pesquisar atividades do modelo...",
+    "noModelActivities": "Nenhuma atividade do modelo encontrada.",
+    "confidence" : "Confiança",
+    "margin": "Margem",
+    "ambiguousRecommendationWarning": "Confiança elevada, mas existe alternativa próxima",
+    "mappingWillBeApplied": "mapeamento será aplicado",
+    "mappingsWillBeApplied": "mapeamentos serão aplicados",
+    "processingAnalysis": "A processar...",
+    "continueAnalysis" : "Continuar Análise"
+  },
+  "mappingValidation": {
+    "validationFailed": "Validação de Mapeamento Falhou",
+    "confirmContinue": "Tem a certeza de que deseja continuar?",
+    "fixErrors": "Por favor, corrija os seguintes erros antes de continuar.",
+    "mappingsWillBeApplied": "Todos os mapeamentos selecionados serão aplicados à análise. Você só pode modificá-los novamente reexecutando a análise.",
+    "errors": "Erros",
+    "close": "Fechar",
+    "cancel": "Cancelar",
+    "continue": "Continuar",
+    "errorEmptyFields": "Mapeamento manual #{{index}} tem campos vazios",
+    "errorMultipleModels": "\"{{logLabel}}\" está mapeado para múltiplas transições do modelo: {{-modelsList}}",
+    "errorDuplicateMapping": "Mapeamento duplicado: \"{{logLabel}}\" → \"{{modelLabel}}\" aparece {{count}} vezes"
+  },
+  "imageDownload": {
+    "exporting": "A exportar o modelo como SVG...",
+    "success": "SVG transferido!",
+    "error": "Falha ao exportar SVG",
+    "frequency": "frequencia",
+    "performance": "desempenho",
+    "conformance": "conformidade",
+    "model": "modelo",
+    "deviations": "desvios",
+    "heatmap": "conformidade",
+    "moves": "movimentos"
+  }
+}

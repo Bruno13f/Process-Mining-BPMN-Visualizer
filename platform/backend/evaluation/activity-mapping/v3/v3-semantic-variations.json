@@ -1,0 +1,19 @@
+{
+  "version": "v3-semantic-variations",
+  "description": "Expected activity correspondences for the semantic-variation synthetic event log. Each semantically equivalent label should resolve to the specified activity in the reference BPMN model.",
+  "expected_mismatches": {
+    "Collect Submission": "Activity_ReceiveRequest",
+    "Log Submission": "Activity_RegisterRequest",
+    "Confirm Submitted Data": "Activity_ValidateRequestData",
+    "Inspect Supporting Evidence": "Activity_CheckSupportingDocuments",
+    "Obtain Missing Details": "Activity_RequestAdditionalInformation",
+    "Evaluate Submission": "Activity_AssessRequest",
+    "Authorise Submission": "Activity_ApproveRequest",
+    "Decline Submission": "Activity_RejectRequest",
+    "Document Outcome": "Activity_RecordDecision",
+    "Inform Applicant": "Activity_NotifyRequester",
+    "Finalise Request": "Activity_CloseRequest",
+    "File Case": "Activity_ArchiveCase"
+  },
+  "missing_label_placeholder": "no-label"
+}

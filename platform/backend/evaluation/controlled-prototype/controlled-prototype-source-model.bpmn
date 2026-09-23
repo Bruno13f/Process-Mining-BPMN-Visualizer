@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_ControlledPrototypeCompact" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.26.0">
+  <bpmn:collaboration id="Collaboration_ControlledPrototypeCompact">
+    <bpmn:participant id="Participant_ControlledPrototype" name="Controlled Prototype Process" processRef="Process_ControlledPrototype" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_ControlledPrototype" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_ControlledPrototype">
+      <bpmn:lane id="Lane_3" name="Lane 3">
+        <bpmn:flowNodeRef>Activity_TaskD</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_2" name="Lane 2">
+        <bpmn:flowNodeRef>Activity_TaskE</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_PathJoin</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Checkpoint</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_TaskF</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_End</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1" name="Lane 1">
+        <bpmn:flowNodeRef>Event_Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_TaskA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Decision</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_TaskB</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_TaskC</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_ExclusiveJoin</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_PathDecision</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Event_Start" name="Start">
+      <bpmn:outgoing>Flow_Start_To_TaskA</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_TaskA" name="Task A">
+      <bpmn:incoming>Flow_Start_To_TaskA</bpmn:incoming>
+      <bpmn:outgoing>Flow_TaskA_To_Decision</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_Decision" name="Gateway A">
+      <bpmn:incoming>Flow_TaskA_To_Decision</bpmn:incoming>
+      <bpmn:outgoing>Flow_Decision_To_TaskB</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Decision_To_TaskC</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_TaskB" name="Task B">
+      <bpmn:incoming>Flow_Decision_To_TaskB</bpmn:incoming>
+      <bpmn:outgoing>Flow_TaskB_To_ExclusiveJoin</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_TaskC" name="Task C">
+      <bpmn:incoming>Flow_Decision_To_TaskC</bpmn:incoming>
+      <bpmn:outgoing>Flow_TaskC_To_ExclusiveJoin</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_ExclusiveJoin" name="Gateway B">
+      <bpmn:incoming>Flow_TaskB_To_ExclusiveJoin</bpmn:incoming>
+      <bpmn:incoming>Flow_TaskC_To_ExclusiveJoin</bpmn:incoming>
+      <bpmn:outgoing>Flow_ExclusiveJoin_To_PathDecision</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_PathDecision" name="Gateway C">
+      <bpmn:incoming>Flow_ExclusiveJoin_To_PathDecision</bpmn:incoming>
+      <bpmn:outgoing>Flow_PathDecision_To_TaskD</bpmn:outgoing>
+      <bpmn:outgoing>Flow_PathDecision_To_TaskE</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_TaskD" name="Task D">
+      <bpmn:incoming>Flow_PathDecision_To_TaskD</bpmn:incoming>
+      <bpmn:outgoing>Flow_TaskD_To_PathJoin</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_Start_To_TaskA" sourceRef="Event_Start" targetRef="Activity_TaskA" />
+    <bpmn:sequenceFlow id="Flow_TaskA_To_Decision" sourceRef="Activity_TaskA" targetRef="Gateway_Decision" />
+    <bpmn:sequenceFlow id="Flow_Decision_To_TaskB" name="Option 1" sourceRef="Gateway_Decision" targetRef="Activity_TaskB" />
+    <bpmn:sequenceFlow id="Flow_Decision_To_TaskC" name="Option 2" sourceRef="Gateway_Decision" targetRef="Activity_TaskC" />
+    <bpmn:sequenceFlow id="Flow_TaskB_To_ExclusiveJoin" sourceRef="Activity_TaskB" targetRef="Gateway_ExclusiveJoin" />
+    <bpmn:sequenceFlow id="Flow_TaskC_To_ExclusiveJoin" sourceRef="Activity_TaskC" targetRef="Gateway_ExclusiveJoin" />
+    <bpmn:sequenceFlow id="Flow_ExclusiveJoin_To_PathDecision" sourceRef="Gateway_ExclusiveJoin" targetRef="Gateway_PathDecision" />
+    <bpmn:sequenceFlow id="Flow_PathDecision_To_TaskD" name="Option 3" sourceRef="Gateway_PathDecision" targetRef="Activity_TaskD" />
+    <bpmn:sequenceFlow id="Flow_PathDecision_To_TaskE" name="Option 4" sourceRef="Gateway_PathDecision" targetRef="Activity_TaskE" />
+    <bpmn:sequenceFlow id="Flow_TaskD_To_PathJoin" sourceRef="Activity_TaskD" targetRef="Gateway_PathJoin" />
+    <bpmn:sequenceFlow id="Flow_TaskE_To_PathJoin" sourceRef="Activity_TaskE" targetRef="Gateway_PathJoin" />
+    <bpmn:sequenceFlow id="Flow_PathJoin_To_Checkpoint" sourceRef="Gateway_PathJoin" targetRef="Gateway_Checkpoint" />
+    <bpmn:sequenceFlow id="Flow_Checkpoint_To_TaskF" sourceRef="Gateway_Checkpoint" targetRef="Activity_TaskF" />
+    <bpmn:sequenceFlow id="Flow_TaskF_To_End" sourceRef="Activity_TaskF" targetRef="Event_End" />
+    <bpmn:task id="Activity_TaskE" name="Task E">
+      <bpmn:incoming>Flow_PathDecision_To_TaskE</bpmn:incoming>
+      <bpmn:outgoing>Flow_TaskE_To_PathJoin</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_PathJoin" name="Gateway D">
+      <bpmn:incoming>Flow_TaskD_To_PathJoin</bpmn:incoming>
+      <bpmn:incoming>Flow_TaskE_To_PathJoin</bpmn:incoming>
+      <bpmn:outgoing>Flow_PathJoin_To_Checkpoint</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:parallelGateway id="Gateway_Checkpoint" name="Gateway E">
+      <bpmn:incoming>Flow_PathJoin_To_Checkpoint</bpmn:incoming>
+      <bpmn:outgoing>Flow_Checkpoint_To_TaskF</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="Activity_TaskF" name="Task F">
+      <bpmn:incoming>Flow_Checkpoint_To_TaskF</bpmn:incoming>
+      <bpmn:outgoing>Flow_TaskF_To_End</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_End" name="End">
+      <bpmn:incoming>Flow_TaskF_To_End</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_ControlledPrototypeCompact">
+    <bpmndi:BPMNPlane id="BPMNPlane_ControlledPrototypeCompact" bpmnElement="Collaboration_ControlledPrototypeCompact">
+      <bpmndi:BPMNShape id="Participant_ControlledPrototype_di" bpmnElement="Participant_ControlledPrototype" isHorizontal="true">
+        <dc:Bounds x="160" y="40" width="1210" height="520" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true">
+        <dc:Bounds x="190" y="40" width="1180" height="260" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_2_di" bpmnElement="Lane_2" isHorizontal="true">
+        <dc:Bounds x="190" y="300" width="1180" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_di" bpmnElement="Lane_3" isHorizontal="true">
+        <dc:Bounds x="190" y="430" width="1180" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_Start_di" bpmnElement="Event_Start">
+        <dc:Bounds x="220" y="157" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="226" y="193" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_TaskA_di" bpmnElement="Activity_TaskA">
+        <dc:Bounds x="310" y="145" width="80" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Decision_di" bpmnElement="Gateway_Decision" isMarkerVisible="true">
+        <dc:Bounds x="450" y="150" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="448" y="200" width="54" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_TaskB_di" bpmnElement="Activity_TaskB">
+        <dc:Bounds x="590" y="90" width="80" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_TaskC_di" bpmnElement="Activity_TaskC">
+        <dc:Bounds x="590" y="200" width="80" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_ExclusiveJoin_di" bpmnElement="Gateway_ExclusiveJoin" isMarkerVisible="true">
+        <dc:Bounds x="700" y="150" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="698" y="200" width="54" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_PathDecision_di" bpmnElement="Gateway_PathDecision" isMarkerVisible="true">
+        <dc:Bounds x="800" y="150" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="797" y="126" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_TaskD_di" bpmnElement="Activity_TaskD">
+        <dc:Bounds x="930" y="465" width="80" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_TaskE_di" bpmnElement="Activity_TaskE">
+        <dc:Bounds x="890" y="335" width="80" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_PathJoin_di" bpmnElement="Gateway_PathJoin" isMarkerVisible="true">
+        <dc:Bounds x="1025" y="340" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1022" y="316" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Checkpoint_di" bpmnElement="Gateway_Checkpoint">
+        <dc:Bounds x="1115" y="340" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1113" y="390" width="54" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_TaskF_di" bpmnElement="Activity_TaskF">
+        <dc:Bounds x="1200" y="335" width="80" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_End_di" bpmnElement="Event_End">
+        <dc:Bounds x="1312" y="347" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1320" y="383" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_Start_To_TaskA_di" bpmnElement="Flow_Start_To_TaskA">
+        <di:waypoint x="256" y="175" />
+        <di:waypoint x="310" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_TaskA_To_Decision_di" bpmnElement="Flow_TaskA_To_Decision">
+        <di:waypoint x="390" y="175" />
+        <di:waypoint x="450" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Decision_To_TaskB_di" bpmnElement="Flow_Decision_To_TaskB">
+        <di:waypoint x="500" y="175" />
+        <di:waypoint x="540" y="175" />
+        <di:waypoint x="540" y="120" />
+        <di:waypoint x="590" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="534" y="93" width="42" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Decision_To_TaskC_di" bpmnElement="Flow_Decision_To_TaskC">
+        <di:waypoint x="500" y="175" />
+        <di:waypoint x="540" y="175" />
+        <di:waypoint x="540" y="230" />
+        <di:waypoint x="590" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="529" y="243" width="42" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_TaskB_To_ExclusiveJoin_di" bpmnElement="Flow_TaskB_To_ExclusiveJoin">
+        <di:waypoint x="670" y="120" />
+        <di:waypoint x="725" y="120" />
+        <di:waypoint x="725" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_TaskC_To_ExclusiveJoin_di" bpmnElement="Flow_TaskC_To_ExclusiveJoin">
+        <di:waypoint x="670" y="230" />
+        <di:waypoint x="725" y="230" />
+        <di:waypoint x="725" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ExclusiveJoin_To_PathDecision_di" bpmnElement="Flow_ExclusiveJoin_To_PathDecision">
+        <di:waypoint x="750" y="175" />
+        <di:waypoint x="800" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_PathDecision_To_TaskD_di" bpmnElement="Flow_PathDecision_To_TaskD">
+        <di:waypoint x="825" y="200" />
+        <di:waypoint x="825" y="495" />
+        <di:waypoint x="930" y="495" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="840" y="472" width="42" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_PathDecision_To_TaskE_di" bpmnElement="Flow_PathDecision_To_TaskE">
+        <di:waypoint x="850" y="175" />
+        <di:waypoint x="930" y="175" />
+        <di:waypoint x="930" y="335" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="887" y="181" width="42" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_TaskD_To_PathJoin_di" bpmnElement="Flow_TaskD_To_PathJoin">
+        <di:waypoint x="1010" y="495" />
+        <di:waypoint x="1050" y="495" />
+        <di:waypoint x="1050" y="390" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_TaskE_To_PathJoin_di" bpmnElement="Flow_TaskE_To_PathJoin">
+        <di:waypoint x="970" y="365" />
+        <di:waypoint x="1025" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_PathJoin_To_Checkpoint_di" bpmnElement="Flow_PathJoin_To_Checkpoint">
+        <di:waypoint x="1075" y="365" />
+        <di:waypoint x="1115" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Checkpoint_To_TaskF_di" bpmnElement="Flow_Checkpoint_To_TaskF">
+        <di:waypoint x="1165" y="365" />
+        <di:waypoint x="1200" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_TaskF_To_End_di" bpmnElement="Flow_TaskF_To_End">
+        <di:waypoint x="1280" y="365" />
+        <di:waypoint x="1312" y="365" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

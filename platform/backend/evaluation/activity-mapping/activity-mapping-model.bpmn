@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  id="Definitions_ActivityMatching"
+                  targetNamespace="https://example.org/activity-matching-validation"
+                  exporterVersion="1.0">
+  <bpmn:process id="Process_ActivityMatchingReference" name="Activity Matching Reference Process" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_Process" name="Start" />
+    <bpmn:task id="Activity_ReceiveRequest" name="Receive Request" />
+    <bpmn:task id="Activity_RegisterRequest" name="Register Request" />
+    <bpmn:task id="Activity_ValidateRequestData" name="Validate Request Data" />
+    <bpmn:task id="Activity_CheckSupportingDocuments" name="Check Supporting Documents" />
+    <bpmn:task id="Activity_RequestAdditionalInformation" name="Request Additional Information" />
+    <bpmn:task id="Activity_AssessRequest" name="Assess Request" />
+    <bpmn:task id="Activity_ApproveRequest" name="Approve Request" />
+    <bpmn:task id="Activity_RejectRequest" name="Reject Request" />
+    <bpmn:task id="Activity_RecordDecision" name="Record Decision" />
+    <bpmn:task id="Activity_NotifyRequester" name="Notify Requester" />
+    <bpmn:task id="Activity_CloseRequest" name="Close Request" />
+    <bpmn:task id="Activity_ArchiveCase" name="Archive Case" />
+    <bpmn:exclusiveGateway id="Gateway_InformationComplete" name="Information complete?" default="Flow_InfoNo_RequestAdditional" />
+    <bpmn:exclusiveGateway id="Gateway_RequestApproved" name="Approved?" default="Flow_ApprovedNo_Reject" />
+    <bpmn:exclusiveGateway id="Gateway_DecisionMerge" name="Decision merged" gatewayDirection="Converging" />
+    <bpmn:endEvent id="EndEvent_Process" name="End" />
+    <bpmn:sequenceFlow id="Flow_Start_Receive" sourceRef="StartEvent_Process" targetRef="Activity_ReceiveRequest" />
+    <bpmn:sequenceFlow id="Flow_Receive_Register" sourceRef="Activity_ReceiveRequest" targetRef="Activity_RegisterRequest" />
+    <bpmn:sequenceFlow id="Flow_Register_Validate" sourceRef="Activity_RegisterRequest" targetRef="Activity_ValidateRequestData" />
+    <bpmn:sequenceFlow id="Flow_Validate_Check" sourceRef="Activity_ValidateRequestData" targetRef="Activity_CheckSupportingDocuments" />
+    <bpmn:sequenceFlow id="Flow_Check_InfoGateway" sourceRef="Activity_CheckSupportingDocuments" targetRef="Gateway_InformationComplete" />
+    <bpmn:sequenceFlow id="Flow_InfoYes_Assess" sourceRef="Gateway_InformationComplete" targetRef="Activity_AssessRequest">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${informationComplete}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_InfoNo_RequestAdditional" sourceRef="Gateway_InformationComplete" targetRef="Activity_RequestAdditionalInformation" />
+    <bpmn:sequenceFlow id="Flow_RequestAdditional_Check" sourceRef="Activity_RequestAdditionalInformation" targetRef="Activity_CheckSupportingDocuments" />
+    <bpmn:sequenceFlow id="Flow_Assess_ApprovedGateway" sourceRef="Activity_AssessRequest" targetRef="Gateway_RequestApproved" />
+    <bpmn:sequenceFlow id="Flow_ApprovedYes_Approve" sourceRef="Gateway_RequestApproved" targetRef="Activity_ApproveRequest">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${approved}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_ApprovedNo_Reject" sourceRef="Gateway_RequestApproved" targetRef="Activity_RejectRequest" />
+    <bpmn:sequenceFlow id="Flow_Approve_Merge" sourceRef="Activity_ApproveRequest" targetRef="Gateway_DecisionMerge" />
+    <bpmn:sequenceFlow id="Flow_Reject_Merge" sourceRef="Activity_RejectRequest" targetRef="Gateway_DecisionMerge" />
+    <bpmn:sequenceFlow id="Flow_Merge_Record" sourceRef="Gateway_DecisionMerge" targetRef="Activity_RecordDecision" />
+    <bpmn:sequenceFlow id="Flow_Record_Notify" sourceRef="Activity_RecordDecision" targetRef="Activity_NotifyRequester" />
+    <bpmn:sequenceFlow id="Flow_Notify_Close" sourceRef="Activity_NotifyRequester" targetRef="Activity_CloseRequest" />
+    <bpmn:sequenceFlow id="Flow_Close_Archive" sourceRef="Activity_CloseRequest" targetRef="Activity_ArchiveCase" />
+    <bpmn:sequenceFlow id="Flow_Archive_End" sourceRef="Activity_ArchiveCase" targetRef="EndEvent_Process" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_ActivityMatching">
+    <bpmndi:BPMNPlane id="BPMNPlane_ActivityMatching" bpmnElement="Process_ActivityMatchingReference">
+      <bpmndi:BPMNShape id="StartEvent_Process_di" bpmnElement="StartEvent_Process">
+        <dc:Bounds x="80" y="302" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_ReceiveRequest_di" bpmnElement="Activity_ReceiveRequest">
+        <dc:Bounds x="145" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_RegisterRequest_di" bpmnElement="Activity_RegisterRequest">
+        <dc:Bounds x="290" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_ValidateRequestData_di" bpmnElement="Activity_ValidateRequestData">
+        <dc:Bounds x="435" y="270" width="125" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_CheckSupportingDocuments_di" bpmnElement="Activity_CheckSupportingDocuments">
+        <dc:Bounds x="595" y="270" width="135" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_InformationComplete_di" bpmnElement="Gateway_InformationComplete">
+        <dc:Bounds x="765" y="285" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_RequestAdditionalInformation_di" bpmnElement="Activity_RequestAdditionalInformation">
+        <dc:Bounds x="590" y="430" width="145" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_AssessRequest_di" bpmnElement="Activity_AssessRequest">
+        <dc:Bounds x="850" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_RequestApproved_di" bpmnElement="Gateway_RequestApproved">
+        <dc:Bounds x="995" y="285" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_ApproveRequest_di" bpmnElement="Activity_ApproveRequest">
+        <dc:Bounds x="1090" y="185" width="115" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_RejectRequest_di" bpmnElement="Activity_RejectRequest">
+        <dc:Bounds x="1090" y="365" width="115" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_DecisionMerge_di" bpmnElement="Gateway_DecisionMerge">
+        <dc:Bounds x="1240" y="285" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_RecordDecision_di" bpmnElement="Activity_RecordDecision">
+        <dc:Bounds x="1330" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_NotifyRequester_di" bpmnElement="Activity_NotifyRequester">
+        <dc:Bounds x="1480" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_CloseRequest_di" bpmnElement="Activity_CloseRequest">
+        <dc:Bounds x="1630" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_ArchiveCase_di" bpmnElement="Activity_ArchiveCase">
+        <dc:Bounds x="1780" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_Process_di" bpmnElement="EndEvent_Process">
+        <dc:Bounds x="1930" y="302" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_Start_Receive_di" bpmnElement="Flow_Start_Receive">
+        <di:waypoint x="116" y="320" />
+        <di:waypoint x="145" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Receive_Register_di" bpmnElement="Flow_Receive_Register">
+        <di:waypoint x="255" y="310" />
+        <di:waypoint x="290" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Register_Validate_di" bpmnElement="Flow_Register_Validate">
+        <di:waypoint x="400" y="310" />
+        <di:waypoint x="435" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Validate_Check_di" bpmnElement="Flow_Validate_Check">
+        <di:waypoint x="560" y="310" />
+        <di:waypoint x="595" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Check_InfoGateway_di" bpmnElement="Flow_Check_InfoGateway">
+        <di:waypoint x="730" y="310" />
+        <di:waypoint x="765" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_InfoYes_Assess_di" bpmnElement="Flow_InfoYes_Assess">
+        <di:waypoint x="815" y="310" />
+        <di:waypoint x="850" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_InfoNo_RequestAdditional_di" bpmnElement="Flow_InfoNo_RequestAdditional">
+        <di:waypoint x="790" y="335" />
+        <di:waypoint x="790" y="470" />
+        <di:waypoint x="735" y="470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_RequestAdditional_Check_di" bpmnElement="Flow_RequestAdditional_Check">
+        <di:waypoint x="590" y="470" />
+        <di:waypoint x="550" y="470" />
+        <di:waypoint x="550" y="390" />
+        <di:waypoint x="662" y="390" />
+        <di:waypoint x="662" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Assess_ApprovedGateway_di" bpmnElement="Flow_Assess_ApprovedGateway">
+        <di:waypoint x="960" y="310" />
+        <di:waypoint x="995" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ApprovedYes_Approve_di" bpmnElement="Flow_ApprovedYes_Approve">
+        <di:waypoint x="1020" y="285" />
+        <di:waypoint x="1020" y="225" />
+        <di:waypoint x="1090" y="225" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ApprovedNo_Reject_di" bpmnElement="Flow_ApprovedNo_Reject">
+        <di:waypoint x="1020" y="335" />
+        <di:waypoint x="1020" y="405" />
+        <di:waypoint x="1090" y="405" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Approve_Merge_di" bpmnElement="Flow_Approve_Merge">
+        <di:waypoint x="1205" y="225" />
+        <di:waypoint x="1265" y="225" />
+        <di:waypoint x="1265" y="285" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Reject_Merge_di" bpmnElement="Flow_Reject_Merge">
+        <di:waypoint x="1205" y="405" />
+        <di:waypoint x="1265" y="405" />
+        <di:waypoint x="1265" y="335" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Merge_Record_di" bpmnElement="Flow_Merge_Record">
+        <di:waypoint x="1290" y="310" />
+        <di:waypoint x="1330" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Record_Notify_di" bpmnElement="Flow_Record_Notify">
+        <di:waypoint x="1440" y="310" />
+        <di:waypoint x="1480" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Notify_Close_di" bpmnElement="Flow_Notify_Close">
+        <di:waypoint x="1590" y="310" />
+        <di:waypoint x="1630" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Close_Archive_di" bpmnElement="Flow_Close_Archive">
+        <di:waypoint x="1740" y="310" />
+        <di:waypoint x="1780" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Archive_End_di" bpmnElement="Flow_Archive_End">
+        <di:waypoint x="1890" y="310" />
+        <di:waypoint x="1930" y="320" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
+

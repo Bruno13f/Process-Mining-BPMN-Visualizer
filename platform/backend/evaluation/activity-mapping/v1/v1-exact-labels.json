@@ -1,0 +1,19 @@
+{
+  "version": "v1-exact-labels",
+  "description": "Expected activity correspondences for the exact-label synthetic event log. All event-log labels correspond directly to activities in the reference BPMN model.",
+  "expected_mismatches": {
+    "Receive Request": "Activity_ReceiveRequest",
+    "Register Request": "Activity_RegisterRequest",
+    "Validate Request Data": "Activity_ValidateRequestData",
+    "Check Supporting Documents": "Activity_CheckSupportingDocuments",
+    "Request Additional Information": "Activity_RequestAdditionalInformation",
+    "Assess Request": "Activity_AssessRequest",
+    "Approve Request": "Activity_ApproveRequest",
+    "Reject Request": "Activity_RejectRequest",
+    "Record Decision": "Activity_RecordDecision",
+    "Notify Requester": "Activity_NotifyRequester",
+    "Close Request": "Activity_CloseRequest",
+    "Archive Case": "Activity_ArchiveCase"
+  },
+  "missing_label_placeholder": "no-label"
+}

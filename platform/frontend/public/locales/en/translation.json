@@ -1,0 +1,313 @@
+{
+  "app": {
+    "title": "BPMN Conformance Metrics Viewer",
+    "connected": "Connected",
+    "disconnected": "Disconnected"
+  },
+  "sidebar": {
+    "analysisResults": "Analysis Results",
+    "uploadResources": "Upload Resources"
+  },
+  "tabs": {
+    "results": "Results",
+    "mappings": "Process Data",
+    "original": "Original",
+    "performance": "Performance",
+    "conformance": "Conformance",
+    "frequency": "Frequency",
+    "viewOptions": "View Options",
+    "processModel": "Process Model",
+    "deviations": "With Deviations",
+    "metric": "Metric",
+    "average": "Average",
+    "median": "Median"
+  },
+  "metrics": {
+    "fitness": "Fitness",
+    "fitnessDescription": "Model-log\nalignment",
+    "precision": "Precision",
+    "precisionDescription": "Model\nspecificity",
+    "generalization": "Generalization",
+    "generalizationDescription": "Model\nflexibility",
+    "simplicity": "Simplicity",
+    "simplicityDescription": "Model\ncomplexity",
+    "processQuality": "Perfect Cases",
+    "processQualityFittingTraces": "Perfect cases:",
+    "processQualityAllTraces": "Total cases:"
+  },
+  "analysis": {
+    "noResults": "No analysis results",
+    "noResultsDescription": "Please re-run the analysis to see the metrics.",
+    "noMappings": "No mappings applied",
+    "noMappingsDescription": "There was no need to apply any mappings.",
+    "startAnalysis": "Start Analysis",
+    "completeAnalysis": "Complete analysis to view conformance visualization",
+    "completeAnalysisDeviations": "Complete analysis to view deviations visualization"
+  },
+  "upload": {
+    "bpmnModelFile": "BPMN Model File",
+    "logFile": "XES Log File",
+    "uploadModel": "Upload BPMN Model",
+    "removeModelTooltip": "Remove BPMN model",
+    "uploadLog": "Upload XES Log",
+    "removeLogTooltip": "Remove XES log",
+    "noBpmnModel": "No BPMN model uploaded",
+    "uploadBpmnFile": "Upload a .bpmn file to visualize it here"
+  },
+  "languageDropdown": {
+    "selectLanguage": "Select Language...",
+    "noLanguage": "No language found."
+  },
+  "conformance": {
+    "title": "Analysis",
+    "connecting": "Connecting to Analysis Server...",
+    "progressCell": "Cell {{current}} of {{total}}",
+    "progress": "Analysis in progress...",
+    "complete": "Analysis completed successfully!",
+    "failed": "Analysis failed.",
+    "create": "Create BPMN Visualizations",
+    "stop": "Stop",
+    "close": "Close"
+  },
+  "variables": {
+    "retrieving": "Retrieving variables",
+    "retrieved": "Variables loaded successfully!",
+    "loading": "Loading analysis results from the backend...",
+    "failed": "Failed to retrieve variables",
+    "successVariables": "Variables Retrieved Successfully",
+    "success": "Analysis variables loaded successfully!",
+    "close": "Close"
+  },
+  "legend": {
+    "viewOptions": "View Options",
+    "alignments": "Alignments",
+    "timePerformance": "Time Conformance",
+    "timeConformanceUnavailable": "Time conformance is unavailable because no cycle times were found in the BPMN model.",
+    "alignmentsView": "Alignments View",
+    "timeConformanceView": "Time Conformance View",
+    "timeConformanceViewModel": "Process Model",
+    "timeConformanceViewDeviations": "With Deviations",
+    "timeConformanceMetric": "Variable",
+    "timeConformanceMetricAverage": "Average",
+    "timeConformanceMetricMedian": "Median",
+    "overallConformance": "Overall Conformance",
+    "moveDetails": "Move Details",
+    "moveTypes": "Move Types",
+    "conformanceHeatmap": "Conformance Heatmap",
+    "timeConformanceHeatmap": "Time Conformance Heatmap",
+    "border": "Border of the activity indicates conformance level",
+    "synchronousMoves": "Synchronous Moves",
+    "modelMoves": "Model Moves",
+    "logMoves": "Log Moves",
+    "lessConformance": "Less Conformance",
+    "higherConformance": "Higher Conformance",
+    "lessTimeConformance": "Faster than expected",
+    "higherTimeConformance": "Slower than expected",
+    "howItWorks": "How It Works",
+    "howItWorksLabelFrequency": "Frequencies:",
+    "howItWorksLabelPerformance": "Average Time:",
+    "howItWorksDescriptionFrequency": "Calculated from conformant flows for both activities and flows.",
+    "howItWorksDescriptionPerformance": "Calculated from conformant flows for both activities and flows.",
+    "howItWorksExampleLabelFrequency": "Example:",
+    "howItWorksExampleLabelPerformance": "Interaction:",
+    "howItWorksExampleDescriptionFrequency": "A has 10 frequency (incoming conformant flow), but only 5 follow the expected path to B (5 deviations), resulting in 5 frequency for C.",
+    "howItWorksExampleDescriptionPerformance": "Click on a activity to see their paths and their active metric time. You can also select which path you want to highlight.",
+    "modelActivities": "Model Activities",
+    "estimatedVsRealCycleTime": "Estimated vs Real Cycle Time",
+    "qualityScoreDesc": "Activities colored by conformance score heatmap.",
+    "conformantMoves": "Conformant Moves:",
+    "conformantMovesDesc": "Steps that followed the process correctly.",
+    "nonConformantMoves": "Non Conformant Moves:",
+    "nonConformantMovesDesc": "Steps that deviated from the expected process.",
+    "successRate": "Success Rate:",
+    "noData": "No data available",
+    "performanceConformanceHowItWorks": "How It Works",
+    "performanceConformanceAverageTime": "Average Time:",
+    "performanceConformanceMedianTime": "Median Time:",
+    "performanceConformanceAverageTimeDesc": "Calculated from conformant flows for both activities and flows.",
+    "performanceConformanceCycleTime": "Estimated Cycle Time (CT):",
+    "performanceConformanceCycleTimeDesc": "The expected cycle time defined for each activity. It is compared against the observed total time.",
+    "performanceConformanceTotalTime": "Real Cycle Time (RCT):",
+    "performanceConformanceTotalTimeDesc": "Waiting time + execution time.",
+    "performanceConformanceInteraction": "Interaction:",
+    "performanceConformanceInteractionDesc": "Click on a activity to reveal the possible paths behind it, active metric time, and their cycle-time conformance. You can select a path to highlight it in the model.",
+    "frequencyDeviationsUnavailable": "Frequency deviations are unavailable because no deviation activities or flows were found.",
+    "performanceDeviationsUnavailable": "Performance deviations are unavailable because no deviation activities or flows were found."
+  },
+  "tooltips": {
+    "synchronous": {
+      "title": "Process Followed as Designed",
+      "description": "These are actions that matched the process exactly as intended. They show proper alignment with the defined workflow."
+    },
+    "model": {
+      "title": "Expected Step Missing",
+      "description": "These are activities the process model required but were not carried out. They highlight gaps where the workflow was incomplete."
+    },
+    "log": {
+      "title": "Unexpected Step Occurred",
+      "description": "These are actions recorded in execution that the process model did not anticipate. They reveal deviations or extra behavior outside the expected flow."
+    },
+    "activities": {
+      "title": "Unexpected Activities",
+      "description": "These are activities that were executed but are not part of the original process model. They represent deviations where additional steps were performed outside the defined workflow."
+    },
+    "flow": {
+      "title": "Unexpected Flow",
+      "description": "These are connections between activities that deviate from the expected process flow. They show paths taken that differ from the standard routing defined in the process model."
+    },
+    "endEvent": {
+      "title": "Unexpected End Event",
+      "description": "These are end events that deviate from the expected process flow. They show paths taken that differ from the standard routing defined in the process model."
+    },
+    "lanes": {
+      "title": "Unexpected Lanes",
+      "description": "These are lanes that contain activities which were done by roles not heavily present in the log."
+    },
+    "unexpectedFrequency": {
+      "title": "Unexpected Activities",
+      "description": "Activities that were executed but are not part of the original process model, as well as how many times they appear through the deviations."
+    },
+    "unexpectedPerformance": {
+      "title": "Unexpected Activities",
+      "description": "Activities that were executed but are not part of the original process model, as well as their average time."
+    },
+    "unexpectedLanes": {
+      "title": "Unexpected Lanes",
+      "description": "These are lanes that contain activities deviating from the expected process flow, from which the roles associated with those activities are not heavily present in the log, indicating sections of the model where deviations occur."
+    },
+    "modelMismatch": {
+      "title": "Model Mismatch",
+      "description": "There might be mismatches between activities incoming flows, frequency & outgoing flows due to hidden deviations. These mismatches can be seen when hovering the activity."
+    }
+  },
+  "deviations": {
+    "legend": "Deviations Legend",
+    "label": "Label",
+    "unexpectedActivities": "Unexpected Activities",
+    "unexpectedFlow": "Unexpected Flow",
+    "unexpectedEndEvent": "Unexpected End Event",
+    "unexpectedLanes": "Unexpected Lanes",
+    "noActivitiesFound": "No deviation activities found",
+    "noCTEntries": "No cycle time entries found",
+    "noLanesFound": "No deviation lanes found",
+    "withDeviationsFrequency": "Deviations Frequency",
+    "withDeviationsPerformance": "Filter Deviations",
+    "modelDeviationsFrequency": "Unexpected Flows Frequency",
+    "withDeviationsFrequencyDescription": "Filter the deviations based on the frequency of the unexpected flows:",
+    "withDeviationsPerformanceDescription": "Filter the deviations based on the selected metric time of the unexpected flows:",
+    "modelDeviationsFrequencyDescription": "Filter the unexpected flows based on their frequency:",
+    "withDeviationsFrequencyNote": "Adjacent flows of filtered deviations will be painted with a gray color",
+    "withDeviationsPerformanceNote": "Adjacent flows outside the selected metric time will be painted with a gray color",
+    "noUnexptedFlowsFoundModel": "No unexpected flows available for the model",
+    "noRolesFound": "No unexpected roles present"
+  },
+  "conformanceTooltip": {
+    "synchronousMoves": "Synchronous Moves",
+    "modelMoves": "Model Moves",
+    "logMoves": "Log Moves",
+    "conformantMoves": "Conformant Moves",
+    "nonConformantMoves": "Non Conformant Moves"
+  },
+  "activityTooltip": {
+    "frequency": "Activity frequency:",
+    "roles": "Roles (and their frequencies):",
+    "seeMore": "Click on the tooltip to see {{count}} more roles ...",
+    "noRoles": "No roles associated with this activity.",
+    "averageTime": "Average",
+    "medianTime": "Median",
+    "minTime": "Minimum",
+    "maxTime": "Maximum",
+    "deviations": "Deviations",
+    "incomingMismatches": "Incoming Mismatches",
+    "outgoingMismatches": "Outgoing Mismatches"
+  },
+  "performanceFlowTooltip": {
+    "averageTime": "Average Time",
+    "description": "Choose which path you want to highlight as it will be shown the selected metric time between the two activities.",
+    "flows": "Paths",
+    "noPaths": "No paths available."
+  },
+  "frequencyFlowTooltip": {
+    "flowFrequency": "Flow frequency",
+    "flows": "Flows",
+    "noPaths": "No paths available"
+  },
+  "timeConformanceTooltip": {
+    "cycleTime": "Cycle Time",
+    "realCycleTime": "Real Cycle Time (RCT)",
+    "estimatedCycleTime": "Estimated Cycle Time",
+    "selectPathForBreakdown": "This activity can be reached through multiple paths. Click on the activity to reveal its paths.",
+    "day": "day",
+    "days": "days",
+    "startEvent": "Start Event",
+    "endEvent": "End Event",
+    "notAvailable": "N/A",
+    "muchFasterThanExpected": "Much faster than expected",
+    "fasterThanExpected": "Faster than expected",
+    "slightlyFasterThanExpected": "Slightly faster than expected",
+    "asExpected": "As expected",
+    "slightlySlowerThanExpected": "Slightly slower than expected",
+    "slowerThanExpected": "Slower than expected",
+    "muchSlowerThanExpected": "Much slower than expected"
+  },
+  "heatmapTooltip": {
+    "titleFrequency": "Activity Frequency",
+    "titleAveragePerformance": "Activity Average Time",
+    "titleMedianPerformance": "Activity Median Time"
+  },
+  "mapping": {
+    "title": "AI Fuzzy Mapping Results",
+    "description": "Review the suggested activity name mappings before continuing. You can create new mappings, deselect suggested ones, or select non-suggested ones to be applied.",
+    "manualMapping": "Manual Mapping",
+    "manualMappingDescription": "Create your own activity name mappings between the log and the model.",
+    "createManualMapping": "Create Manual Mapping",
+    "removeManualMapping": "Remove manual mapping",
+    "noManualMappings" : "No manual mappings added.",
+    "suggestedMapping": "Suggested",
+    "suggestedMappingDescription" : "These mappings have high confidence scores and will be applied. You can deselect them to exclude if desired.",
+    "noSuggestedMappings": "No suggested mappings available.",
+    "nonSuggestedMapping": "Non-Suggested",
+    "nonSuggestedMappingDescription" : "These mappings have low confidence scores and will not be applied. You can select them to include if desired.",
+    "noNonSuggestedMappings": "No non-suggested mappings available.",
+    "logLabel": "Log Label",
+    "placeholderLog": "Select log activity...",
+    "searchPlaceholderLog": "Search log activities...",
+    "noLogActivities": "No log activities found.",
+    "modelLabel": "Model transition",
+    "placeholderModel": "Select model transition...",
+    "searchPlaceholderModel": "Search model transitions...",
+    "noModelActivities": "No model transitions found.",
+    "confidence" : "Confidence",
+    "margin": "Margin",
+    "ambiguousRecommendationWarning": "High confidence, but close alternative exists",
+    "mappingWillBeApplied": "mapping will be applied",
+    "mappingsWillBeApplied": "mappings will be applied",
+    "processingAnalysis": "Processing...",
+    "continueAnalysis" : "Continue Analysis"
+  },
+  "mappingValidation": {
+    "validationFailed": "Mapping Validation Failed",
+    "confirmContinue": "Are you sure you want to continue?",
+    "fixErrors": "Please fix the following errors before continuing.",
+    "mappingsWillBeApplied": "All of the selected mappings will be applied to the analysis. You can only modify them again by re-executing the analysis process.",
+    "errors": "Errors",
+    "close": "Close",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "errorEmptyFields": "Manual mapping #{{index}} has empty fields",
+    "errorMultipleModels": "\"{{logLabel}}\" is mapped to multiple model labels: {{-modelsList}}",
+    "errorDuplicateMapping": "Duplicate mapping: \"{{logLabel}}\" → \"{{modelLabel}}\" appears {{count}} times"
+  },
+  "imageDownload": {
+    "exporting": "Exporting Model as SVG...",
+    "success": "SVG downloaded!",
+    "error": "Failed to export SVG",
+    "frequency": "frequency",
+    "performance": "performance",
+    "conformance": "conformance",
+    "model": "model",
+    "deviations": "deviations",
+    "heatmap": "conformance",
+    "moves": "moves"
+  }
+}
