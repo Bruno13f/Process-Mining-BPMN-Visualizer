@@ -68,6 +68,12 @@ The activity-mapping weights should sum to `1.0`.
 
 `EXPORT_EVALUATION_METRICS` can be enabled when running controlled validation to export comparison reports.
 
+The controlled activity-mapping evaluation has its own `.env.example` file in `platform/backend/evaluation/activity-mapping`. It uses the same activity-mapping configuration values as the backend `.env`, but is scoped specifically to the backend-only activity-mapping evaluation task.
+
+The activity-mapping weights should sum to `1.0`.
+
+`EXPORT_EVALUATION_METRICS` can be enabled when running controlled validation to export comparison reports.
+
 ## Frontend `.env`
 
 Copy `platform/frontend/.env.example`, rename the copied file to `.env`, and keep it in `platform/frontend`.
