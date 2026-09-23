@@ -185,6 +185,13 @@ http://localhost:5173
 
 ## Input and Output
 
+Example input files are available in `platform/input`:
+
+- `pp-bpmn-model.bpmn`
+- `pp-event-log.xes`
+
+These correspond to the Purchase Process examples used in the dissertation.
+
 The platform expects:
 
 - A BPMN source model.
