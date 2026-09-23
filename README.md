@@ -1,6 +1,6 @@
 # Process Mining BPMN Visualizer
 
-Process Mining BPMN Visualizer is a web-based proof-of-concept platform developed as part of the dissertation **“BPMN-Preserving Visual Augmentation of Process Mining Diagnostics for Stakeholder-Oriented Process Monitoring”**.
+Process Mining BPMN Visualizer is a web-based proof-of-concept platform developed as part of the dissertation **“BPMN-Preserving Visual Augmentation of Process Mining Diagnostics for Stakeholder-Oriented Process Analysis”**.
 
 The platform preserves the uploaded BPMN model as the main visual context and augments it with process-mining diagnostics instead of replacing it with a discovered model or detached technical output. The source BPMN model remains unchanged; analytical evidence is rendered as temporary overlays and, when applicable, visually distinct deviation artefacts.
 
