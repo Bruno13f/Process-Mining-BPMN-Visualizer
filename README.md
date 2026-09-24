@@ -216,7 +216,7 @@ The dissertation evaluation included controlled technical validation and an expl
 If you use this project in academic work, please cite the related dissertation:
 
 ```text
-Ferreira, B. (2026). BPMN-Preserving Visual Augmentation of Process Mining Diagnostics for Stakeholder-Oriented Process Monitoring: Validating Process Mining-Augmented BPMN Processes for Non-Expert Stakeholders. University of Leiria and Oeste.
+Ferreira, B. (2026). BPMN-Preserving Visual Augmentation of Process Mining Diagnostics for Stakeholder-Oriented Process Monitoring: Validating Process Mining-Augmented BPMN Processes for Non-Expert Stakeholders [Project supervised by Ricardo Martinho]. University of Leiria and Oeste.
 ```
 
 ## License
